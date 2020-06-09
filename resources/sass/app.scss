@@ -1,0 +1,44 @@
+// buttons
+@use 'buttons';
+@use 'select-css';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 2rem;
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    form {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        input[type=text] {
+            margin-right: 1rem;
+        }
+
+        input[type=text],
+        select,
+        .button {
+            font-size: 2rem;
+        }
+    }
+
+    button > img {
+        height: 1.2rem;
+        width: 1.2rem;
+    }
+
+    .downloading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

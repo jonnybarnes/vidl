@@ -1,0 +1,58 @@
+// Modern CSS: https://moderncss.dev/css-button-styling-guide/
+
+$btnColor: #3e68ff;
+
+// Reset styles
+a.button {
+    text-decoration: none;
+}
+
+button.button {
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    padding: 0;
+    cursor: pointer;
+}
+
+// Button Styles
+a.button,
+button.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $btnColor;
+    color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.18);
+    padding: 0.25em 0.75em;
+    min-width: 10ch;
+    min-height: 44px;
+    text-align: center;
+    line-height: 1.1;
+
+    transition: 220ms all ease-in-out;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled) {
+        background-color: scale-color($btnColor, $lightness: -20%);
+    }
+
+    &:focus:not(:disabled) {
+        outline: none;
+        box-shadow: 0 0 0 4px scale-color($btnColor, $lightness: -40%);
+    }
+
+    &:disabled {
+        opacity: 50%;
+        cursor: not-allowed;
+    }
+
+    &--small {
+        font-size: 1.15rem;
+    }
+
+    &--block {
+        width: 100%;
+    }
+}
