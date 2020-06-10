@@ -3,9 +3,7 @@ name: PestPHP Tests
 on: [push, pull_request]
 
 jobs:
-  pest:
-    name: Pest Tests
-
+  build:
     runs-on: ubuntu-latest
 
     steps:
