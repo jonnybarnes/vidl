@@ -3,16 +3,14 @@ name: PestPHP Tests
 on: [push, pull_request]
 
 jobs:
-  pest:
-    name: Pest Tests
-
+  build:
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
       - name: Install dependencies
-        run: composer install --no-interaction --prefer-dist
+        run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
 
       - name: Run tests
         run: ./vendor/bin/pest
